@@ -8,7 +8,7 @@ import {
   vaultV2Abi,
 } from '@berachain-foundation/berancer-sdk';
 import 'dotenv/config';
-import { getPrice } from './prices';
+import { getPercentageChange, getPrice } from './prices';
 
 const HONEY_TOKEN_ADDRESS = '0xfcbd14dc51f0a4d49d5e53c2e0950e0bc26d0dce';
 const IBGT_TOKEN_ADDRESS = '0xac03caba51e17c86c921e1f6cbfbdc91f8bb2e6b';
@@ -104,6 +104,9 @@ async function main() {
   //   throw error;
   // }
   console.log(await getPrice('berachain', IBGT_TOKEN_ADDRESS));
+  console.log(
+    await getPercentageChange('berachain', IBGT_TOKEN_ADDRESS, '24h')
+  );
 }
 
 main()
