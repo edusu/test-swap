@@ -1,16 +1,17 @@
 {
   "name": "bera-arb",
-  "module": "index.ts",
+  "module": "src/index.ts",
   "type": "module",
   "private": true,
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "^5.8.3"
   },
   "dependencies": {
     "@berachain-foundation/berancer-sdk": "^1.1.2",
+    "axios": "^1.9.0",
     "dotenv": "^16.5.0",
     "ethers": "^6.14.1"
   }
